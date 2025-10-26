@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+    <meta charset="utf-8">
+    <title>Maths MPSI - Accueil</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="author" content="EL GARGATI Abdelghani">
+    <meta name="description" content="Site de la classe de MPSI, lycée Ibn Abdoun, Khouribga.">
+    <meta name="robots" content="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <style>
+        #pi-container {
+            font-size: 1.2em;
+            overflow: hidden;
+            color: #0028AB;
+        }
+
+        #pi-number {
+            display: inline-block;
+            white-space: nowrap;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var piNumber = document.getElementById('pi-number');
+            var piDigits = '3,141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982';
+
+            function displayPiDigit(index) {
+                if (index < piDigits.length) {
+                    piNumber.innerText = piDigits.substring(0, index + 1);
+                    setTimeout(function() {
+                        displayPiDigit(index + 1);
+                    }, 100); // Ajustez la durée (en millisecondes) entre les chiffres
+                } else {
+                    // Réinitialiser l'animation après le dernier chiffre
+                    setTimeout(function() {
+                        displayPiDigit(0);
+                    }, 1000); // Ajustez la durée avant de recommencer (en millisecondes)
+                }
+            }
+
+            displayPiDigit(0);
+        });
+    </script>
+    </head>
+
+    <body>
+        <div id="page">
+            <header>
+            <!-- Logo + titre -->
+            <div id="titre_principal">
+                <img src="img/logo6.PNG" style="width:12%" alt="TOTO" id="logo"/>        
+                <div id="titre">
+                    <h1>Mathématiques MPSI</h1>
+                </div>
+            </div>
+            <!-- Menu -->
+        <article2>
+            <nav>
+                <ul>
+                    <li class="page_courante">ACCUEIL</li>
+                    <li><a href="cours.html" id="coursbtn">Cours</a></li>
+                    <li><a href="devoirs.html">Devoirs</a></li>
+                    <li><a href="colles.html">Colles</a></li>    
+                </ul>
+            </nav>
+        </article2>
+            </header>
+            <!-- Bannière + description -->
+            <div id="pi-container">
+            <span id="pi-number"></span>
+            </div>
+            <!-- Premier article -->
+            <article class="a1">
+             <h3>Bienvenue</h3>
+
+                <p>Bienvenue sur le site de la classe de MPSI du lycée CPGE Ibn Abdoun de Khouribga. Ce site met à disposition des ressources pédagogiques destinées aux étudiants.</p>
+
+                <p>Tous les documents disponibles en téléchargement sont au format PDF. </p>
+
+                <p>De nombreuses coquilles et imprécisions ont été corrigées au fil du temps, mais il est toujours possible que certaines erreurs subsistent. Si vous en repérez ou avez toute question ou remarque, n’hésitez pas à me contacter par 
+                <a href="mailto:elg.abdelghani@gmail.com">e-mail</a> ou via 
+                <a href="https://wa.me/+212687209134">WhatsApp</a> : vos retours sont précieux pour améliorer la qualité de ces ressources.</p>
+
+            </article>
+
+
+
+            <article2>
+            <div id="content">
+            <!-- A cote 1-->
+            <aside id="left-aside">
+                <div >
+                    <h3>News</h3>
+                    <ul>
+                        <li>
+                            <a class="marquee">DS1 le 15/09/2025</a>
+                        </li>                   
+                    </ul>
+                </div>
+            
+                <div>
+                    <p>"L'histoire géologique nous montre que la vie n'est qu'un court épisode entre deux éternités de mort, et que, dans cet épisode même, la pensée consciente n'a duré et ne durera qu'un moment. La pensée n'est qu'un éclair au milieu d'une longue nuit, mais c'est cet éclair qui est tout."</p> 
+                    <p style="text-align: right;"><strong>Henri Poincaré</strong></p> 
+                </div>
+            </aside>
+
+            <!-- deuxième article -->
+            <article id="aritcle-milieu" class="a1">
+                <h3>L'année de MPSI</h3>
+                <p>Vous pouvez télécharger le <a href="fichiers/MPSI-2021-Maths.pdf">programme</a> officiel de mathématiques en MPSI en vigueur à la rentrée 2025/2026, au format PDF. Pour bien prendre en main son année d’apprentissage, il est important de se référer régulièrement à ce programme, notamment afin de connaître ce qui est exigible.</p>
+
+                <p>La page suivante donne accès <a href="cours.html">aux cours</a> chapitre par chapitre au fur et à mesure de l'avancement dans l'année.</p>           
+
+                <p>La page suivante donne accès <a href="devoirs.html">aux devoirs</a> surveillés et aux devoirs à la maison, au fur et à mesure de l'avancement dans l'année.</p> 
+
+                <p>La page suivante donne accès aux programmes de <a href="colles.html">colles</a> semaine par semaine.</p>
+
+                <p>Vous y trouverez également l’ensemble des chapitres traités l’année précédente dans la page suivante : <a href="Cours 2024/2025.html">Cours 2024/2025</a>.</p>
+            </article>
+
+
+
+            <!-- A cote 2-->
+            <aside id="right-aside">
+                <div>
+                    <h3>Liens</h3>
+                    <ul>
+                        <li>
+                            <a href="https://www.cpge.ac.ma/" title="Accès au site prepas">e-CPGE</a>
+                        </li>                   
+                    </ul>
+                </div>
+                <div>
+                    <p>The only way to learn mathematics is to do mathematics.</p> 
+                    <p style="text-align: right;"><strong>Paul Halmos</strong></p> 
+                </div>
+            </aside>
+            </div>
+            </article2>
+
+            <!-- FOOTER  -->
+        </div>    
+        <footer>
+        </footer>
+        </div>
+        <div>
+            <aside id="haut">
+                <a href="#titre_principal">
+                    <b><img src="img/haut.png" alt="" title="Haut de page"/></b>
+                </a>
+            </aside>
+        </div>
+    </body>
+
+</html>
+

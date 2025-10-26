@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+    <meta charset="utf-8">
+    <title>Maths MPSI - Accueil</title>
+    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="author" content="EL GARGATI Abdelghani">
+    <meta name="description" content="Site de la classe de MPSI, lycée Ibn Abdoun, Khouribga.">
+    <meta name="robots" content="all">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <style>
+        #pi-container {
+            font-size: 1.2em;
+            overflow: hidden;
+            color: #0028AB;
+        }
+
+        #pi-number {
+            display: inline-block;
+            white-space: nowrap;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var piNumber = document.getElementById('pi-number');
+            var piDigits = '3,141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982';
+
+            function displayPiDigit(index) {
+                if (index < piDigits.length) {
+                    piNumber.innerText = piDigits.substring(0, index + 1);
+                    setTimeout(function() {
+                        displayPiDigit(index + 1);
+                    }, 100); // Ajustez la durée (en millisecondes) entre les chiffres
+                } else {
+                    // Réinitialiser l'animation après le dernier chiffre
+                    setTimeout(function() {
+                        displayPiDigit(0);
+                    }, 1000); // Ajustez la durée avant de recommencer (en millisecondes)
+                }
+            }
+
+            displayPiDigit(0);
+        });
+    </script>
+    </head>
+
+    <body>
+        <div id="page">
+            <header>
+            <!-- Logo + titre -->
+            <div id="titre_principal">
+                <img src="img/logo6.PNG" style="width:12%" alt="TOTO" id="logo"/>        
+                <div id="titre">
+                    <h1>Mathématiques MPSI</h1>
+                </div>
+            </div>
+            <!-- Menu -->
+            <article2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="cours.html">Cours</a></li>
+                    <li><a href="devoirs.html">Devoirs</a></li>
+                    <li class="page_courante">COLLES</li>        
+                </ul>
+            </nav>
+        </article2>
+            </header>
+            <!-- Bannière + description -->
+            <div id="pi-container">
+            <span id="pi-number"></span>
+            </div>
+            <!-- Premier article -->
+            <article class="a1">
+             <h3>Programmes des colles</h3>
+
+                <p>Ci-dessous, vous trouverez l’ensemble des programmes de colle, présentés semaine par semaine, au format PDF. Chaque document précise les thèmes abordés et les exercices proposés pour la période correspondante.</p>
+            </article>
+            <article class="colles">
+            <nav class="documents">
+                <ul> 
+                <li><a href="colles/colle01.pdf">Colle 01</a> Semaine du 19/09/2022.</li>
+                </ul>
+            </nav>
+        </article>
+
+            <!-- FOOTER  -->
+        </div>    
+        <footer>
+        </footer>
+        </div>
+        <div>
+            <aside id="haut">
+                <a href="#titre_principal">
+                    <b><img src="img/haut.png" alt="" title="Haut de page"/></b>
+                </a>
+            </aside>
+        </div>
+    </body>
+
+</html>
+
