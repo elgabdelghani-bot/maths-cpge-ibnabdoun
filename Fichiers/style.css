@@ -1,0 +1,379 @@
+html, body {
+    background: url(img/imageFond9.jpg) fixed;
+    font-family: Verdana, Arial, Helvetica, sans-serif ;
+    color: #000;
+    background-size:cover;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-size: 12pt;
+}
+
+a:link { color: #900; background: transparent; text-decoration: none; }
+a:visited { color: #900; background: transparent; }
+a:hover { color: #0028AB; background:#900; }
+a:active { color: #988; background: transparent; }
+
+
+
+#page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Assure que la page prend toute la hauteur */
+    min-width: 100%;
+}
+
+#content {
+    display: flex;
+    flex: 1; /* Prend tout l'espace disponible */
+}
+
+
+#titre_principal {
+    display: inline-block;
+}
+
+
+
+section h1, header nav a
+{
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+header
+{
+background: url('img/separateur2.png') repeat-x bottom;
+}
+
+
+header {
+    position : relative;
+}    
+
+header h1 {
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 10%;
+}
+    
+
+#logo, #titre {
+    display: inline-block;
+    vertical-align : middle;
+    text-align: left;
+    margin-bottom: 3%;
+    /*border : black 1px solid;*/
+}
+
+
+header nav{
+    position : absolute ;
+    right : 0%;
+    bottom : 2%;
+    text-align: center;
+}
+    
+header nav ul {
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 4vh;
+}
+
+.page_courante { /*pour le menu du header */
+    color: #000;
+    border-bottom: 0.5vh solid #000;
+    padding-bottom: 0.5vh;
+    background:transparent;
+}
+
+header nav a{
+    /*font-size: 1em;*/
+    color: #181818;
+    padding-bottom: 0.5vh;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #0028AB;
+    border-bottom: 0.5vh solid #0028AB;
+    background:transparent;
+}
+
+
+
+article, aside {
+ display: inline-block;
+ vertical-align: top;
+ text-align: justify;
+}
+.a1 {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    padding:0.1%;
+    margin-bottom:2%;
+    font-size : 11pt;
+    box-shadow: 0% 1% 2% #1c1a19;
+    border-radius: 1vh;
+    border: 0.2vh #706b64 solid;
+
+}
+
+article {
+    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
+    padding:0.1%;
+    /*border: 2px #000 solid;*/
+    background: rgba(244,244,244,0.5);
+    margin-bottom:3%;
+    font-size : 11pt;
+    box-shadow: 0% 1% 2% #1c1a19;
+    border-radius: 1%;
+    border: 0.2% #706b64 solid;
+
+}
+
+
+/* Conteneur principal */
+article2 {
+    display: flex;               /* active flexbox */
+    flex-direction: row;         /* alignement horizontal */
+    justify-content: space-between; /* espace égal entre les colonnes */
+    align-items: stretch;        /* les éléments remplissent la hauteur du conteneur */
+    width: 100%; 
+    hie                /* prend toute la largeur disponible */
+    background: transparent;     
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;             /* permet le retour à la ligne sur petits écrans */
+}
+
+
+/* Colonne de gauche */
+#left-aside {
+    flex: 1 1 20%;               /* prend 20% de la largeur, peut rétrécir si nécessaire */
+    margin: 1%;                /* espace autour */
+     float: left;
+    height: 100%;
+    min-width: 10%; /* équivalent relatif à la largeur du conteneur */
+}
+
+/* Colonne centrale */
+#aritcle-milieu {
+    flex: 2 1 55%;               /* prend 55% de la largeur, peut rétrécir */
+    margin: 1%; 
+    float: left;
+    height: 80%;
+    min-width: 30%; /* équivalent relatif à la largeur du conteneur */
+}
+
+/* Colonne de droite */
+#right-aside {
+    flex: 1 1 20%;               /* prend 20% de la largeur, peut rétrécir */
+    margin: 1%;
+     float: left;
+    height: 100%;
+    min-width: 10%; /* équivalent relatif à la largeur du conteneur */
+}
+
+
+
+
+
+article p {
+ text-indent:1em;
+ margin: 0.5%;
+ margin-bottom:0.5%;
+ }
+
+article p:first-letter {
+    font: 2em Times, Helvetica, serif;
+    font-size:14pt;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin: 0; /* 3px 3px 0;*/
+    padding: 0%; 
+    color:#060440;
+}
+
+
+
+aside h3, article h3 {
+    font-family: Times, serif;
+    text-transform: uppercase;
+    text-align:center;
+    background: url('img/separateur3.png') no-repeat center bottom;
+    padding-bottom:2vh;
+    margin:0;
+ }
+
+aside {
+ width: 19%;
+ background-color: /*darkgray; #706b64;*/ rgba(244,244,244,0.9);
+ box-shadow: 0px 1% 2% #1c1a19;
+ border-radius: 1%;
+ padding: 2%;
+ color: black;
+ font-size: 10pt;
+ border: 0.2vh #706b64 solid;
+}
+
+aside ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+aside ul li {
+    list-style-type: none;
+    border: #000 1px solid;
+    padding: 1px;
+    margin: 1px;
+    text-align: left;
+    
+}
+
+.actif {
+    color:#900;
+}
+
+.passif {
+    color:#fff;
+}
+
+.important {
+    color: #0028AB;
+}
+
+
+.marquee {
+  display: inline-block;
+  position: relative;
+  animation: moveBackAndForth 3s infinite alternate ease-in-out;
+  white-space: nowrap;
+  color: #900;
+}
+
+@keyframes moveBackAndForth {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(94px); /* distance du mouvement */
+  }
+}
+
+
+
+
+
+
+footer{
+    height: 30%;
+    background: url('img/separateur2.png') repeat-x bottom;
+    margin: auto;
+}
+
+#haut {
+  position: relative;                /* pour fixer l'élément */
+  bottom: 10px;                   /* distance depuis le bas */
+  left: 50%;                      /* place le bord gauche au centre */
+  transform: translateX(-50%);    /* déplace l’élément pour le centrer */
+  display: flex;                  /* active le modèle flexbox */
+  justify-content: center;        /* centre horizontalement */
+  align-items: center;            /* centre verticalement */
+  height: 100%;                   /* hauteur du conteneur */
+  width: 100%;                   /* largeur du conteneur */
+  background: none;               /* pas d’arrière-plan */
+  border: none;                     /* pas de bordure */
+}
+#haut a:hover {
+  background: transparent !important; /* ou une couleur neutre */
+  color: inherit !important;          /* évite le texte blanc inutile ici */
+}
+
+
+#auteur{
+    position: absolute;
+    left: 3%;
+    vertical-align: top;
+    padding-bottom: 1px;
+    height: 3%;
+    width: 50%;
+}
+
+.documents ul, .colles ul {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+.documents ul li, .colles ul li {
+    list-style-type: none;
+    border: #000 1px solid;
+    padding: 2px;
+    margin: 2px;
+    text-align: left;
+    background: transparent;
+    color: inherit;
+}
+
+.colles ul li {
+    text-align : left;
+}
+.documents a, .colles a {
+    text-decoration: none;
+    font-weight: 200;
+    padding-left:12px;
+    background: url(img/telecharger.png) no-repeat left center;
+    
+}
+
+.documents ul a:hover, .documents ol a:hover, .colles ul a:hover {
+    background: #900;
+    color: #0028AB;
+}
+
+.cahier h2{
+    position: relative;
+    color : forestgreen;
+    text-align: center;
+    background: url('img/separateur2.png') no-repeat center bottom;
+    padding-bottom:15px;
+    margin:15px;
+}
+
+.cahier h3{
+    background : none;
+    text-transform : none;
+    text-align: left;
+    padding-bottom:0px;
+    font-size: 12pt;
+    }
+    
+
+.cahier ol{
+    margin-top : 10px;
+    padding-top : 10px;
+    }
+
+.cours {
+    width: 65%;      /* ajuste la valeur */
+    margin: 0 auto;
+}
+
+.devoirs{
+    width: 80%;      /* ajuste la valeur */
+    margin: 0 auto;
+}
+
+.colles{
+    width: 50%;      /* ajuste la valeur */
+    margin: 0 auto;
+}
+
